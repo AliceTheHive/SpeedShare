@@ -1,0 +1,2 @@
+The "new.css" is currently being used. It is functionally equivalent to main.css,
+ but is compressed + optimized for speed.

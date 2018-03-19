@@ -1,0 +1,349 @@
+/* Author: Maxwell Crawford */
+html {
+	font-family: "Trebuchet MS", Helvetica, sans-serif;
+}
+body {
+    background-color: #d3e8ff; /*rgb(215, 235, 255);*/
+    background: -webkit-linear-gradient(130deg, #7fade0, #d3e8ff); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(130deg, #7fade0, #d3e8ff); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(130deg, #7fade0, #d3e8ff); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(130deg, #7fade0, #d3e8ff); /* Standard syntax (must be last) */
+    margin-left: 60px;
+    margin-right: 60px;
+    margin-top: 30px;
+    padding-top: 150px;
+    text-shadow: 0 1px 2px #ffffff;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+header {
+	position: absolute; /* allows banner/text to scroll behind navbar */
+	top: 52px;
+	left: 0;
+	width: 100%;
+	text-align: center;
+    text-shadow: 2px 2px 4px #333; /*not supported in IE9 and earlier*/
+}
+
+/* Manually affix the small logo to the inner left of banner, below Home */
+.sm_logo {
+    position: absolute;
+    left: 10px;
+    margin-left: 10px;
+    margin-top: 22px;
+    text-align: left;
+}
+
+/* Custom padding for banner element */
+span {
+	padding-top: 50px;
+}
+
+/* Custom width/height for banner img */
+.banner_img {
+    width: 100%;
+    height: 90px;
+}
+
+/* Set of custom fixed/float styles for navbar list */
+nav {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	text-align: center;
+	font-size: 20px;
+    /*background-color: #1b2f47;*/
+}
+
+ul#navbar {
+	position: fixed;
+    top: 0;
+    width: 100%;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #1b2f47; /*was 333*/
+}
+
+ul#navbar li {
+    float: left;
+    background-color: #1b2f47;
+}
+
+ul#navbar li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    -webkit-transition-duration: 0.3s; /* Safari */
+    transition-duration: 0.3s;
+}
+
+/* Used for hovering over non-active nav links */
+ul#navbar li a:hover:not(.active) {
+    background-color: #2e8ccb;
+    border-color: #2e8ccb;
+    -webkit-transition-duration: 0.3s; /* Safari */
+    transition-duration: 0.3s;
+    /*text-shadow: 2px 2px 20px #49a5e1;*/
+}
+
+/* Used for active link upon hover */
+ul#navbar li a:hover, a:active {
+    background-color: #6fd1ff;
+    border-color: #6fd1ff;
+    -webkit-transition-duration: 0.3s; /* Safari */
+    transition-duration: 0.3s;
+    /*text-shadow: 2px 2px 4px #49a5e1;*/
+}
+
+/* Used for active link when neutral */
+.active {
+    background-color: #359ee1; /*was 33afff*/
+    border-color: #359ee1;
+    -webkit-transition-duration: 0.3s; /* Safari */
+    transition-duration: 0.3s;
+}
+
+/* Used to highlight current page on navbar */
+#homehere, #here {
+    border: 1px solid transparent;
+    border-image: linear-gradient(-90deg, #1b2f47 6%, #7fd8ff 50%, #1b2f47 94%); /*was 0, 25%, 0*/
+    border-image-slice: 1;
+    padding: 2px;
+    text-shadow: 1px 1px 2px black, 5px 5px 30px lightblue, 5px 5px 10px darkblue; /*not supported in IE9 and earlier*/
+}
+
+#reghere {
+    border-style: solid;
+    border-bottom-color: #33e3ff;
+    border-top-color: #33e3ff;
+    border-left-color: #1b2f47;
+    border-right-color: #7fd8ff;
+    border-width: 1px;
+    padding: 2px;
+    text-shadow: 1px 1px 2px black, 5px 5px 30px lightblue, 5px 5px 10px darkblue; /*not supported in IE9 and earlier*/
+}
+
+/* Rounding first corner of nav */
+ul#navbar li:first-child a{
+    -webkit-border-top-left-radius: 8px;
+    -webkit-border-bottom-left-radius: 8px;
+    -moz-border-radius-topleft: 8px;
+    -moz-border-radius-bottomleft: 8px;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+}
+
+/* Rounding middle nav */
+ul#navbar li:nth-child(2) a{
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    border-radius: 8px;
+}
+ul#navbar li:nth-child(3) a{
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    border-radius: 8px;
+}
+
+/* Rounding last corner of nav */
+ul#navbar li:last-child a{
+    -webkit-border-top-right-radius: 12px;
+    -webkit-border-bottom-right-radius: 12px;
+    -moz-border-radius-topright: 12px;
+    -moz-border-radius-bottomright: 12px;
+    border-top-right-radius: 12px;
+    border-bottom-right-radius: 12px;
+}
+ul#navbar li:last-child a:hover{
+    text-shadow: 2px 2px 4px #49a5e1;
+}
+
+
+
+/* Remove ugly post-click outline */
+a {
+    outline: 0;
+}
+
+section {
+	margin-left: 60px; /*was 80px*/
+}
+
+/* Form stuff..*/
+fieldset {
+    border: 1px solid #2e8ccb;
+    margin-left: 10%;
+    margin-right: 10%;
+    -webkit-transition-duration: 0.2s; /* Safari */
+    transition-duration: 0.2s;
+}
+fieldset:hover {
+    box-shadow: -1px 2px 3px #49a5e1;
+    -webkit-transition-duration: 0.2s; /* Safari */
+    transition-duration: 0.2s;
+}
+
+fieldset.adminfield {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+div.formleft
+{
+    display: block;
+    float: left;
+    text-align: left;
+    margin-left: 15%;
+}
+
+/* NOTE: This is formatted to align well on fullscreen and smaller width screens! */
+div.formright
+{
+    display: block;
+    float: none; /*was right*/
+    text-align: left;
+    margin-right: 2%;
+    margin-left: 63%;
+}
+
+/* Button formatting */
+input[type=submit] {
+    background-color: white;
+    font-size: 14px;
+    padding: 12px 28px;
+    border: 2px solid #008CBA;
+    border-radius: 4px;
+    color: black;
+    cursor: pointer;
+    -webkit-transition-duration: 0.3s; /* Safari */
+    transition-duration: 0.3s;
+}
+
+input[type=submit]:hover {
+    background-color: #008CBA;
+    font-size: 14px;
+    padding: 12px 28px;
+    border: 2px solid #008CBA;
+    border-radius: 4px;
+    color: white;
+    cursor: pointer;
+    -webkit-transition-duration: 0.3s; /* Safari */
+    transition-duration: 0.3s;
+    box-shadow: 0 12px 16px 30px rgba(0,0,0,0.24) inset, 0 17px 40px 35px rgba(0,0,0,0.19) inset;
+}
+
+/* Input Text formatting */
+input[type=text], input[type=password], input[type=tel] {
+    border: 1px solid #1e344c;
+    border-radius: 4px;
+    color: black;
+    -webkit-transition-duration: 0.2s; /* Safari */
+    transition-duration: 0.2s;
+}
+
+input[type=text]:hover, input[type=password]:hover, input[type=tel]:hover {
+    background-color: #008CBA;
+    border: 1px solid #6fd1ff;
+    border-radius: 4px;
+    color: white;
+    -webkit-transition-duration: 0.2s; /* Safari */
+    transition-duration: 0.2s;
+    box-shadow: 1px 1px 2px #004d66;
+}
+
+input[type=text]:focus, input[type=password]:focus, input[type=tel]:focus {
+    background-color: #008CBA;
+    border: 1px solid #6fd1ff;
+    border-radius: 4px;
+    color: white;
+    -webkit-transition-duration: 0.2s; /* Safari */
+    transition-duration: 0.2s;
+}
+
+/* For error messages on the feedback form */
+.warning {
+    font-weight: bold;
+    color: #f00;
+}
+
+/* For enlarging img's upon hover in the storage gallery...*/
+.userimg {
+    -webkit-transition-duration: 0.2s; /* Safari */
+    transition-duration: 0.2s;
+}
+
+.userimg:hover {
+    -ms-transform: scale(1.4, 1.4); /* IE 9 */
+    -webkit-transform: scale(1.4, 1.4); /* Safari */
+    transform: scale(1.4, 1.4);
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+}
+
+/* For URL table in storage */
+.urltable {
+    width: 100%;
+    text-align: center;
+}
+
+.urltable th {
+    height: 30px;
+}
+
+/* Footer style; fix to bottom, without overlap! */
+footer {
+	/*width: 30%;*/
+    width: 280px;
+    left: 0;
+    bottom: 15px;
+	position: fixed;
+	text-align: left;
+	color:navy;
+    line-height: 1em;
+    margin-bottom: 15px;
+    background-color: rgb(200, 220, 245);
+    background: -webkit-linear-gradient(130deg, #b2cce8, #d3e8ff); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(130deg, #b2cce8, #d3e8ff); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(130deg, #b2cce8, #d3e8ff); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(130deg, #b2cce8, #d3e8ff); /* Standard syntax (must be last) */
+    -webkit-transition-duration: 0.2s; /* Safari */
+    transition-duration: 0.2s;
+    background-color: rgba(0,0,0,0.6);
+    opacity: 0.6;
+}
+
+footer:hover {
+    width: 280px;
+    left: 0;
+    bottom: 15px;
+    position: fixed;
+    text-align: left;
+    color:navy;
+    line-height: 1em;
+    margin-bottom: 15px;
+    background-color: rgb(200, 220, 245);
+    background: -webkit-linear-gradient(130deg, #b2cce8, #d3e8ff); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(130deg, #b2cce8, #d3e8ff); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(130deg, #b2cce8, #d3e8ff); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(130deg, #b2cce8, #d3e8ff); /* Standard syntax (must be last) */
+    -webkit-transition-duration: 0.2s; /* Safari */
+    transition-duration: 0.2s;
+    opacity: 1.0;
+}
+
+/* Magical hover for h2, h3, h5*/
+h2:hover, h3:hover, h5:hover {
+    -webkit-transition-duration: 0.15s; /* Safari */
+    transition-duration: 0.15s;
+    text-shadow: 1px 1px 2px #49a5e1;
+}
+h2, h3, h5 {
+    -webkit-transition-duration: 0.15s; /* Safari */
+    transition-duration: 0.15s;
+}
